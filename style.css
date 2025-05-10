@@ -1,1 +1,137 @@
 @import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Outfit:wght@100..900&display=swap');
+
+:root {
+    --yellow: #F4D04E;
+    --gray-950: #111;
+    --gray-500: #6b6b6b;
+    --white: #fff;
+    --black: #000;
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'figtree', Arial, Helvetica, sans-serif;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    min-width: 100vw;
+    background-color: var(--yellow);
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 24px;
+    width: 100%;
+    max-width: 386px;
+    height: auto;
+    padding: 24px;
+    background-color: var(--white);
+    border: 1px solid var(--gray-950);
+    border-radius: 20px;
+    box-shadow: 8px 8px 0px 0px var(--black);
+}
+
+.card-image {
+    width: 100%;
+    background-color: var(--yellow);
+    border-radius: 10px;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+}
+
+.card-header {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.category {
+    max-width: 82px;
+    padding: 4px 12px;
+    border-radius: 4px;
+    background-color: var(--yellow);
+    color: var(--gray-950);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 150%;
+    letter-spacing: 0px;
+}
+
+
+.publish-date {
+    font-size: 14px;
+    color: var(--gray-950);
+    font-weight: 500;
+    line-height: 150%;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 150%;
+    color: var(--gray-950);
+    transition: all ease-out 0.2s;
+}
+
+.title:hover {
+    color: var(--yellow);
+}
+
+.description {
+    color: var(--gray-500);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 150%;
+}
+
+.author {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 12px;
+}
+
+.author-image {
+    max-width: 32px;
+    max-height: 32px;
+    object-fit: cover;
+}
+
+.author-name {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 150%;
+    color: var(--gray-950);
+}
+
+@media (max-width: 375px) {
+    .card {
+        min-width: 327px;
+    }
+    .card-content {
+        font-size: 14px;
+    }
+    .title {
+        font-size: 20px;
+    }
+    .description {
+        font-size: 14px;
+    }
+}
